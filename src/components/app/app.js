@@ -1,11 +1,14 @@
 import React from "react";
+import CityWeather from "../city-weather";
+import Header from "../header";
 
 import "./app.scss";
 
 const App = () => {
   return (
     <div>
-      <h1>New project</h1>
+      <Header />
+      <CityWeather />
     </div>
   );
 };
