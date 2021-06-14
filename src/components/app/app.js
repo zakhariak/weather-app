@@ -1,22 +1,22 @@
 import React from "react";
-import CityWeather from "../city-weather";
+import { withWeatherService } from "../hoc";
+import { Route, Switch } from "react-router-dom";
 import Header from "../header";
-import WeatherService from "../../services/weather-servise";
+import { HomePage, CityWeatherDetails, SettingsPage } from "../pages";
 
 import "./app.scss";
 
 const App = () => {
-  const { getWeatherInCity, getDataWeatherByDay } = new WeatherService();
-  getWeatherInCity("paris").then((data) => {
-    console.log(getDataWeatherByDay(data.weatherByDays[0]));
-  });
-
   return (
     <div>
       <Header />
-      <CityWeather />
+      <Switch>
+        <Route path="/" component={HomePage} exact />
+        <Route path="/details" component={CityWeatherDetails} />
+        <Route path="/settings" component={SettingsPage} />
+      </Switch>
     </div>
   );
 };
 
-export default App;
+export default withWeatherService()(App);

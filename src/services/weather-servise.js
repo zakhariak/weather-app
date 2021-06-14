@@ -9,12 +9,12 @@ export default class WeatherService {
     if (!res.ok) {
       throw new Error(`Could not fetch ${city}, received ${res.status}`);
     }
-    return await res.json();
+    return await await res.json();
   }
 
   getWeatherInCity = async (city) => {
     const data = await this.getResource(city);
-    return this._transformDataWeather(data);
+    return this._transformCityWeatherByDay(data);
   };
 
   getDataWeatherByDay = async (weatherDataByDay) => {
@@ -30,7 +30,6 @@ export default class WeatherService {
   };
 
   _transformCityWeatherByDay = (weatherByDay) => {
-    console.log(weatherByDay);
     const { clouds, main, weather, wind, dt_txt } = weatherByDay;
     const daysName = [
       "Sunday",
