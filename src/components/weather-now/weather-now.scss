@@ -1,0 +1,58 @@
+@import "../../assets/styles/variables.scss";
+
+div.weather-now {
+  width: 100%;
+  height: 60%;
+  margin: 20px 0;
+  padding: 15px 0;
+  border: 1px solid gray;
+  border-radius: 3px;
+  background-color: $background-color-carts;
+
+  > h2 {
+    text-align: center;
+    font-size: $bigFontSize;
+  }
+
+  > div.weather-wrap {
+    width: 35%;
+    margin: 0 auto;
+    text-align: center;
+
+    > h1 {
+      margin: 10px 0;
+      text-transform: capitalize;
+      &.temp {
+        font-size: ($bigFontSize) + 15px;
+      }
+      &.description {
+        font-size: $bigFontSize;
+      }
+    }
+    > .img {
+      height: 60px;
+      margin: 15px 0;
+    }
+
+    > div {
+      display: flex;
+      margin: 15px 0;
+      &.monthDate,
+      &.dayTime {
+        display: flex;
+        justify-content: center;
+        > p {
+          margin: 0 2px;
+        }
+      }
+      &.weatherDetails {
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        > p {
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}

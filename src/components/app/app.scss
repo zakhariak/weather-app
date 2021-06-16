@@ -1,3 +1,13 @@
-div{
-    color: red;
+@import "../../assets/styles/reset.scss";
+@import "../../assets/styles/variables.scss";
+
+div.container-body {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  padding: 20px 15px;
+  background: $background-color-main;
+  color: $textColor;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.7px;
 }

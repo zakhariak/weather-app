@@ -1,0 +1,20 @@
+@import "../../assets/styles/variables.scss";
+
+div.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  > div.links > a {
+    color: $textColor;
+    margin: 0 7px;
+    :hover {
+      transform: scale(1.2);
+    }
+    :active {
+      transform: scale(1);
+    }
+    > i {
+      font-size: 24px;
+    }
+  }
+}

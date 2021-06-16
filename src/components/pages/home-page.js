@@ -1,21 +1,13 @@
 import React from "react";
+import SearchBox from "../search-box/search-box";
 import WeatherNow from "../weather-now";
-// import WeatherService from "../../services/weather-servise";
+
+import "./home-page.scss";
 
 const HomePage = () => {
-  // const weather = {
-  //   id: 1,
-  //   name: "lviv",
-  //   country: "ukr",
-  //   days: [
-  //     {
-  //       id: 123,
-  //       name: "Monday",
-  //     },
-  //   ],
-  // };
   return (
-    <div>
+    <div className="home-page">
+      <SearchBox />
       <WeatherNow />
     </div>
   );

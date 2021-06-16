@@ -5,10 +5,11 @@ import Header from "../header";
 import { HomePage, CityWeatherDetails, SettingsPage } from "../pages";
 
 import "./app.scss";
+// import "../../styles/assets/reset.scss";
 
 const App = () => {
   return (
-    <div>
+    <div className="container-body">
       <Header />
       <Switch>
         <Route path="/" component={HomePage} exact />
