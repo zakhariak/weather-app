@@ -1,0 +1,68 @@
+@import "../../assets/styles/variables.scss";
+
+div.weather-wrap {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+
+  > h1 {
+    margin: 10px 0;
+    text-transform: capitalize;
+    &.temp {
+      font-size: ($bigFontSize) + 15px;
+    }
+    &.description {
+      font-size: $bigFontSize;
+    }
+  }
+  > img {
+    height: 100px;
+    margin: 10px 0;
+    filter: brightness(0) invert(1);
+  }
+
+  > div {
+    display: flex;
+    margin: 15px 0;
+    &.monthDate,
+    &.dayTime {
+      display: flex;
+      justify-content: center;
+      > p {
+        margin: 0 2px;
+      }
+    }
+    &.weatherDetails {
+      font-size: $smallFontSize;
+      display: flex;
+      justify-content: center;
+      > p {
+        margin: 0 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  div.weather-wrap {
+     width: 80%;
+    > h1 {
+      &.temp {
+        font-size: ($normalFontSize) + 15px;
+      }
+      &.description {
+        font-size: $normalFontSize;
+      }
+    }
+    > img {
+      height: 60px;
+      margin: 5px 0;
+    }
+    > div {
+      margin: 10px 0;
+    }
+    p {
+      font-size: $smallerFontSize;
+    }
+  }
+}

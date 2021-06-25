@@ -1,3 +1,5 @@
+@import "../../assets/styles/variables.scss";
+
 div.search-box {
   width: 100%;
   display: flex;
@@ -9,7 +11,7 @@ div.search-box {
     border: 1px gray;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
-    font-size: 14px;
+    font-size: $smallFontSize;
   }
   > button {
     height: 24px;
@@ -27,5 +29,11 @@ div.search-box {
       margin: 1px;
       color: white;
     }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  div.search-box > input {
+    font-size: $smallerFontSize;
   }
 }

@@ -1,0 +1,84 @@
+@import "../../assets/styles/variables.scss";
+
+ul.days-list {
+  width: 100%;
+  display: flex;
+  li {
+    display: inline;
+    width: 25%;
+    min-height: 100px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    background-color: $background-color-carts;
+    &:nth-child(1) {
+      margin-right: 5px;
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin: 0 5px;
+    }
+    &:nth-child(4) {
+      margin-left: 5px;
+    }
+    > div.listItem {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+
+      > h3 {
+        margin-top: 5px;
+        font-size: $middleFontSize;
+      }
+      > img {
+        width: 80px;
+        height: 100px;
+        filter: brightness(0) invert(1);
+      }
+      > p {
+        margin-top: 10px;
+        font-size: $smallFontSize;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  ul.days-list {
+    display: block;
+    li {
+      display: block;
+      width: 100%;
+      margin: 10px 0 !important;
+      > div.listItem {
+        > h3 {
+          margin-top: 5px;
+          font-size: $normalFontSize;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  ul.days-list {
+    li {
+      > div.listItem {
+        > h3 {
+          margin-top: 5px;
+          font-size: $smallFontSize;
+        }
+        > img {
+          width: 60px;
+          height: 60px;
+          margin-top: 5px;
+        }
+        > p {
+        margin-top: 5px;
+        font-size: $smallerFontSize;
+      }
+      }
+    }
+  }
+}
